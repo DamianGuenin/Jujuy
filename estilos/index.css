@@ -1,0 +1,180 @@
+/*empiezo de cero a ver que pasa*/
+
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&family=Sora:wght@100..800&display=swap');
+
+/*colores: Marrón: #4E3B31 (50%)
+Beige: #F5F5DC (30%)
+Verde oliva: #556B2F (20%)*/
+
+/* ===========================================================================*/
+/*  IMPORTATE !!!! */
+/*  POR DEFECTO EL ESTILO ESTÁ DEFINIDO EN TAMAÑO ESCRITORIO */
+/* ===========================================================================*/
+
+/*Variables */
+/*===========*/
+:root{
+    --fuente-regular:"Sora", sans-serif;
+    --fuente-acento: "Sawarabi Mincho", serif;
+    
+    --color-principal: #4E3B31; /*rgb(78, 59, 49);*/
+    --color-secundario: #F5F5DC;
+    --color-acento:#556B2F; /* para el call to action?*/
+
+    /*ALGUNOS COLORES QUE ME GUSTAN */
+    --color-raspberry: #CE2D4F;
+    --color-navajo-white: #FFE0B5;
+    --color-seal-brown: #472415;
+    --color-bistre: #3F2613;
+    --color-chamoise: #A98360;
+    --color-antique-white: #FDEED9;
+    --color-carnation-pink: #FFADC6;
+    --color-dogwood-rose: #D4216C;
+    --color-carmine:#991218;
+    --color-russet:#92512E;
+    --color-fern-green:#436A36;
+    --color--cerulean: #0081A7;
+    --color-verdigris:#00AFB9;
+    --color-caput-mortum:#4C2719;
+}
+
+
+/*Clases de utilidad para no repetir código*/
+/*==========================================*/
+
+.contenedor-general{
+    /*Evitar que la página se estire demasiado en pantallas muy grandes*/
+    max-width:1320px;
+    margin:0 auto; /*centramos el contenido de la página*/
+}
+
+.padding-alrededor{
+    padding: 1rem;
+}
+
+.texto-centrado{
+    text-align: center;
+}
+
+/*------------------------------------------------------------------------------------*/
+
+
+/*HERO */
+/*=================================================*/
+.hero{
+    background-image: url("../images/hero/emilio-lujan-OKWAtnEfN4M-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 100px); /*no me gusta, es medio traido de los pelos SE FIJÓ LA ALTURA DEL NAV A 100PX*/
+    padding: 9%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.hero h1{
+    font-family: var(--fuente-acento);
+    color: var(--color-antique-white);
+    font-size: 3.5rem;
+    text-align: center;
+    text-shadow: 2px 3px 2px rgba(78, 49, 69, 0.6);
+    margin-bottom: 1.5rem;
+    
+}
+
+.hero h1 span{
+    font-weight: bolder;
+    color: var(--color-principal)
+}
+
+.hero p{
+    font-size: 1.25rem;
+    color: var(--color-antique-white);
+    font-weight: bold;
+    text-shadow: 2px 3px 2px rgba(78, 49, 69, 0.6);
+}
+
+.btn-hero{
+    border: none;
+    outline: none;
+    font-size: 1.75rem;
+    background-color: var(--color-raspberry);
+    color: var(--color-antique-white);
+    font-weight: bold;
+    padding: 16px 24px;
+    border-radius: 10px;
+    text-shadow: 2px 3px 2px rgba(78, 49, 69, 0.6);
+    transition:all 0.4s ease;
+}
+
+.btn-hero:hover{
+    background-color: var(--color-seal-brown);
+    color: var(--color-raspberry);
+    text-shadow: 2px 3px 2px rgba(255, 255, 255, 0.6);
+}
+
+/*MAIN */
+/*=================================================*/
+
+.main-encabezado{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Cada article lleva la clase contenedor-destino*/
+
+.contenedor-destino{
+    padding: 1.2rem;
+    /*debug => esto es para facilitar el desarrollo, facilitando la visualizacion de los elementos*/
+    border: 3px solid blue;
+}
+
+.contenedor-destino h3{
+    text-align: center;
+    margin-bottom: 1.8rem;
+}
+
+.contendedor-destino__presentacion{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+
+.contendedor-destino__presentacion p{
+    margin-top: 1.5rem;
+}
+
+.contenedor-destino__presentacion-texto span{
+    margin-right: 1rem;
+}
+
+
+
+
+
+/*  ================================ MEDIA QUERIES  ================================ */
+/*=================================================================================== */
+
+/* MODO DISPOSITIVOS MÓVILES  HASTA 768 PX */
+/****************************************/
+
+
+@media screen and (max-width:768px) {
+    /* ======== HEADER - NAV se movieron al archivo css del header ========= */
+
+
+
+
+    .contendedor-destino__presentacion{
+        grid-template-columns:1fr; /*sólo una columna */
+    }
+    
+
+     /* ======== HERO ========= */
+     .hero h1{
+        font-size: 3.5rem;
+        
+    }
+}

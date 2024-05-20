@@ -1,0 +1,35 @@
+.hotel{
+    margin-top:5%;
+    border: 1px solid black; 
+}
+.hotel h2{
+    font-family:serif;
+}
+
+.hotel2{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+
+
+.section2 {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 1%;
+    border: 1px solid black;
+}
+
+.article2{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Permitir que los elementos se ajusten automáticamente */
+    
+}
+
+.article2 p{
+    color:rgb(58, 70, 233);
+}
+.mapa {
+    overflow: hidden;
+
+}
