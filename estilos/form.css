@@ -4,6 +4,7 @@
     margin-left: 10%;
     padding: 1rem; /* Agrega un padding para un mejor aspecto */
     box-sizing: border-box; /* Asegúrate de que el padding esté incluido en el ancho */
+    background-color: rgb(166, 175, 157);
 }
 
 .formulario {
@@ -16,6 +17,8 @@
     display: flex;
     flex-direction: column;
 }
-.marco{
-    background-color: rgb(177, 192, 161);
+
+.marco:hover{
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: transform 0.5s ease; /* Añadir transición */    
 }
